@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Seus componentes cadastrados: </p>
+<div class="" th:each="components : ${session.componentes}">
+    <p th:text="${components.name}"></p>
+</div>
+
+<p>Log de Interação</p>
+
+<div class="" th:each="log : ${session.logs}">
+    <p th:text="${log.dateRegistro}"></p>
+    <p th:text="${log.description}"></p>
+</div>
+
+</body>
+</html>
