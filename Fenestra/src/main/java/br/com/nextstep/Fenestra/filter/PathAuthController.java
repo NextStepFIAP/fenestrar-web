@@ -32,7 +32,7 @@ public class PathAuthController implements Filter {
         }
 
         //Autorizando o uso de css e js e imágens na página
-        if (uri.contains("css") || uri.contains("js") || uri.contains("assets")) {
+        if (uri.contains("css") || uri.contains("styles") || uri.contains("js") || uri.contains("assets")) {
             chain.doFilter(req, res);
             return;
         }

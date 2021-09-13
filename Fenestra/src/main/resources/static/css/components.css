@@ -1,0 +1,29 @@
+.container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.container__components--content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px 0;
+}
+
+.container__logs--content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 0;
+}
+
+.container__components--title{
+    color: #E2C792;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.container__logs--title{
+    color: #E2C792;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}

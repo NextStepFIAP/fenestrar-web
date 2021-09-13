@@ -1,0 +1,67 @@
+.container{
+    text-align: center;
+}
+
+.text-balance{
+   display: flex;
+   justify-content: center;
+   font-size: calc(0.7vw + 0.7vh + 0.7vmin);
+}
+
+h1{
+   font-weight: 700;
+   margin-bottom: 10px;
+   font-size: calc(1vw + 1vh + 1vmin);
+}
+
+.text-balance h2{
+    margin-right: 5px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+}
+
+form label, input,select {
+    font-size: calc(0.5vw + 0.5vh + 0.5vmin);
+}
+
+form input,select {
+    margin: 5px 0 10px;
+    padding: 5px 10px;
+}
+
+.btn-add{
+    font-size: calc(0.7vw + 0.7vh + 0.7vmin);
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #fef102;
+    filter: brightness(0.95);
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover{
+    filter: brightness(1.2);
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 1024px) {
+    form{
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    form{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

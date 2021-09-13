@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+    <link rel="stylesheet" th:href="@{/css/components.css}">
 </head>
 <body>
+    <main class="container">
+        <div class="container__components">
+            <div class="container__components--title">
+                <p>Seus componentes cadastrados: </p>
+            </div>
+            <div class="container__components--content">
+                <div class="" th:each="components : ${session.components}">
+                    <p th:text="${components.name}"></p>
+                </div>
+            </div>
+        </div>
+        <div class="container__logs">
+            <div class="container__logs--title">
+                <p>Log de Interação</p>
+            </div>
 
-<p>Seus componentes cadastrados: </p>
-<div class="" th:each="components : ${session.components}">
-    <p th:text="${components.name}"></p>
-</div>
+            <div class="container__logs--content">
+                <div class="" th:each="log : ${session.logs}">
+                    <p th:text="${log.dateRegistro}"></p>
+                    <p th:text="${log.description}"></p>
+                </div>
+            </div>
+        </div>
 
-<p>Log de Interação</p>
+    </main>
 
-<div class="" th:each="log : ${session.logs}">
-    <p th:text="${log.dateRegistro}"></p>
-    <p th:text="${log.description}"></p>
-</div>
 
 </body>
 </html>

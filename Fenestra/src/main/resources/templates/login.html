@@ -4,30 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 <body>
+    <main class="container">
+        <div class="container__info">
+            <h1>Fenestra</h1>
 
-    <h1>Fenestra</h1>
+            <h2>Login</h2>
 
-    <h2>Login</h2>
+            <p>Usuario: convidado</p>
+            <p>Senha: 12345678</p>
+        </div>
 
-    <p>Usuario: convidado</p>
-    <p>Senha: 12345678</p>
+        <form action="/login" method="post" th:object="${user}">
+            <label for="name">Nome: </label>
+            <input name="name" id="name" type="text" th:field="*{name}" required>
+            <span th:errors="*{name}"></span>
 
-    <form action="/login" method="post" th:object="${user}">
-        <label for="name">nome: </label>
-        <input name="name" id="name" type="text" th:field="*{name}" required>
-        <span th:errors="*{name}"></span>
+            <label for="password">Senha: </label>
+            <input name="password" id="password" type="password" th:field="*{password}" required>
+            <span th:errors="*{password}"></span>
 
-        <label for="password">Senha: </label>
-        <input name="password" id="password" type="password" th:field="*{password}" required>
-        <span th:errors="*{password}"></span>
-
-        <button class="">Enviar</button>
-    </form>
-
-
-
+            <button class="">Enviar</button>
+        </form>
+    </main>
 
 </body>
 </html>
