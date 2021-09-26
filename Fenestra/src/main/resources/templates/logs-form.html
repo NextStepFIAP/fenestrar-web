@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head th:replace="~{base :: head}">
+		<meta charset="UTF-8">
+		<title>Working Hour</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div th:replace="~{base :: titulo('Cadastro Log')}"></div>
+					
+				<div class="card mb-3 col-sm-12">
+					<form action="/log" class="card-body" method="post" th:object="${log}">
+												
+						<div class="d-flex justify-content-start">							
+							<div class="form-group pl-3">
+								<label for="description">Description:</label>
+								<input id="description" name="description" th:field="*{description}"/>
+							</div>
+						</div>						
+							<div class="form-group col-sm-6">
+								<label class="control-label" for="date">Date</label>
+		        				<input id="dateRegistro" name="dateRegistro" placeholder="DD/MM/YYYY" type="text" th:field="*{dateRegistro}"/>
+		        				<span th:errors="*{dateRegistro}"></span>
+							</div>						
+							<div class="pl-4">
+								<button class="btn btn-success ml-3">Submit</button>	
+							</div>
+					</form>
+				</div>
+		</div>
+		
+	<!-- Date Range Picker -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+		<script>
+		    $(document).ready(function(){
+		        var date_input=$('input[name="dateRegistro"]');
+		        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		        date_input.datepicker({
+		            format: 'dd/mm/yyyy',
+		            container: container,
+		            todayHighlight: true,
+		            autoclose: true,
+		        })
+		    })
+
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head th:replace="~{base :: head}">
+		<meta charset="UTF-8">
+		<title>Home</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div th:replace="~{base :: titulo('Home')}"></div>
+					
+				<div class="card mb-3 col-sm-12">
+						<div class="d-flex justify-content-start mt-3">							
+							<div class="form-group pl-3">
+								<a class="btn btn-primary" href="/components">Componentes</a>
+							</div>
+							<div class="pl-4">
+								<a class="btn btn-primary" href="/user">Usuário</a>							
+							</div>							
+						</div>
+				</div>
+		</div>
+	</body>
+</html>

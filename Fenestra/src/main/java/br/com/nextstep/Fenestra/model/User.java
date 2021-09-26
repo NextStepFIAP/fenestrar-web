@@ -10,8 +10,8 @@ import javax.persistence.SequenceGenerator;
 import lombok.Data;
 
 @Data
-@Entity(name = "TB_USUARIO")
-@SequenceGenerator(name="user", sequenceName = "SQ_TB_USUARIO", allocationSize = 1)
+@Entity(name = "TB_USUARIO_DEVOPS")
+@SequenceGenerator(name="user", sequenceName = "SQ_TB_USUARIO_DEVOPS", allocationSize = 1)
 public class User {
 
 	@Id @GeneratedValue(generator = "user", strategy = GenerationType.SEQUENCE)

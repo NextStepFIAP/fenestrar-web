@@ -10,8 +10,8 @@ import javax.persistence.SequenceGenerator;
 import lombok.Data;
 
 @Data
-@Entity(name = "TB_COMPONENTE")
-@SequenceGenerator(name="componente", sequenceName = "SQ_TB_COMPONENTE", allocationSize = 1)
+@Entity(name = "TB_COMPONENTE_DEVOPS")
+@SequenceGenerator(name="componente", sequenceName = "SQ_TB_COMPONENTE_DEVOPS", allocationSize = 1)
 public class Componente {
 	
 	@Id @GeneratedValue(generator = "log", strategy = GenerationType.SEQUENCE)

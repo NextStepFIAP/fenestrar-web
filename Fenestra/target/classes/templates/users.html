@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+    <link rel="stylesheet" th:href="@{/css/components.css}">
+</head>
+<body>
+    <main class="container">
+        <div class="container__components">
+            <div class="container__components--title">
+                <p>Usuários cadastrados: </p>
+  				<a href="/user/new">Cadastrar</a>              
+            </div>
+            <div class="container__components--content">
+                <div class="" th:each="users : ${session.users}">
+                    <p th:text="${users.name}"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
